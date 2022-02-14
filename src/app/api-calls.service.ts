@@ -14,13 +14,13 @@ export class ApiCallsService {
   //SOCIOS
 
   getSocios() {
-    return this.http.get<Socios[]>('https://api-klk.herokuapp.com//socios');
+    return this.http.get<Socios[]>('https://api-klk.herokuapp.com/socios');
   }
 
   PostSocios(SocioInsert: any) {
     console.log(SocioInsert);
     return this.http
-      .post('https://api-klk.herokuapp.com//socios', SocioInsert)
+      .post('https://api-klk.herokuapp.com/socios', SocioInsert)
       .subscribe((res) => console.log(res));
   }
 
